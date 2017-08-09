@@ -1,5 +1,6 @@
 require "bundler/setup"
 require "yuso"
+require "rspec/collection_matchers"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
