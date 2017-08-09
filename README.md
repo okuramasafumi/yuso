@@ -1,8 +1,9 @@
+https://travis-ci.org/okuramasafumi/yuso.svg?branch=master
+
 # Yuso
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/yuso`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Yuso is a gem to get some data from famous Japanese shipping companies such as Yamato.
+Currently it provides prefecture-area mapping and shipping fee data.
 
 ## Installation
 
@@ -22,7 +23,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Yuso supports 3 shipping companies and each have different namespace. There is only one interface: `load` class method. For example:
+
+```ruby
+Yuso::Yamato::Mapping.load # => prefecture-area mapping for Yamato
+Yuso::Sagawa::ShippingFee.load('tokyo') # => shipping fee table for Sagawa and from Tokyo
+```
 
 ## Development
 
@@ -32,7 +38,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/yuso.
+Bug reports and pull requests are welcome on GitHub at https://github.com/okuramasafumi/yuso.
 
 ## License
 
